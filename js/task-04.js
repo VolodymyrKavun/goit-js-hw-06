@@ -1,16 +1,17 @@
 const refs = {
-  valueEl: Number(document.querySelector('#value').textContent),
   counterValue: document.querySelector('#value'),
   decrementBtn: document.querySelector('[data-action=decrement]'),
   incrementBtn: document.querySelector('[data-action=increment]'),
 };
 
+let count = 0;
+
 refs.incrementBtn.addEventListener('click', () => {
-  refs.valueEl += 1;
-  refs.counterValue.innerHTML = refs.valueEl;
+  count += 1;
+  refs.counterValue.innerHTML = count;
 });
 
 refs.decrementBtn.addEventListener('click', () => {
-  refs.valueEl -= 1;
-  refs.counterValue.innerHTML = refs.valueEl;
+  count -= 1;
+  refs.counterValue.innerHTML = count;
 });

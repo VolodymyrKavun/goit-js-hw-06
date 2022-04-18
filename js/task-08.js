@@ -14,9 +14,9 @@ function onFormSubmit(event) {
   };
 
   if (formData.mail === '') {
-    alert('Поле mail потрібно заповнити');
+    return alert('Поле mail потрібно заповнити');
   } else if (formData.password === '') {
-    alert('Поле password потрібно заповнити');
+    return alert('Поле password потрібно заповнити');
   }
 
   console.log(formData);
